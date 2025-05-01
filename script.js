@@ -1,0 +1,2 @@
+document.getElementById('burger').addEventListener('click',()=>{document.getElementById('main-nav').classList.toggle('show');});
+document.querySelectorAll('[data-scroll]').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.querySelector(btn.dataset.scroll).scrollIntoView({behavior:'smooth'});}));

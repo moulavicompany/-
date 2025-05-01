@@ -1,0 +1,42 @@
+:root{
+  --black:#000;--gold:#d4af37;--gray:#1c1c1c;--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Vazir',sans-serif;background:var(--black);color:var(--white);}
+.container{width:90%;max-width:1000px;margin:auto;}
+/* Header */
+.header{position:fixed;top:0;width:100%;background:rgba(0,0,0,.85);padding:.7rem 0;z-index:1000;}
+.header__inner{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:.6rem;}
+.logo__img{height:40px;width:auto;}
+.logo__text{font-size:1.4rem;color:var(--gold);font-weight:700;margin:0;}
+/* Nav */
+.nav{display:flex;gap:1.2rem;}
+.nav a{
+  color:var(--white);
+  text-decoration:none;       /* خط زیر لینک حذف شد */
+  font-weight:500;
+  transition:color .3s ease;
+}
+.nav a:hover{color:var(--gold);}
+.btn-gold{background:var(--gold);color:var(--black);border:none;padding:.45rem 1rem;border-radius:4px;cursor:pointer;}
+.burger{display:none;font-size:1.5rem;background:none;border:none;color:var(--gold);cursor:pointer;}
+/* Hero */
+.hero{height:65vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-top:70px;}
+.hero h2{font-size:1.8rem;margin-bottom:1rem;}
+/* Sections */
+.section{padding:4rem 0;text-align:center;}
+.section.dark{background:var(--gray);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:2rem;}
+.card{background:var(--gray);padding:1rem;border-radius:6px;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:2rem;}
+.gallery img{width:100%;border-radius:6px;}
+.contact-form{display:grid;gap:1rem;max-width:400px;margin:2rem auto 0;}
+.contact-form input,.contact-form textarea{padding:.6rem;border:none;border-radius:4px;width:100%;}
+.footer{text-align:center;padding:1rem 0;background:var(--gray);margin-top:2rem;color:var(--gold);}
+/* Responsive */
+@media(max-width:768px){
+  .nav{display:none;flex-direction:column;background:var(--black);position:absolute;top:70px;right:0;width:65%;padding:1rem;gap:1.5rem;}
+  .nav.show{display:flex;}
+  .burger{display:block;}
+}
