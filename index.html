@@ -2,92 +2,108 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <title>مولوی کمپانی | تیونینگ و طراحی خودروهای لوکس</title>
+  <title>مولوی کمپانی | طراحی سه‌بعدی خودروهای لوکس</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- فونت‌های فارسی -->
   <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css">
+  <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css">
+  <!-- AOS animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="header">
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
     <div class="container header__inner">
-
-      <!-- لوگو فقط به‌عنوان تیتر (بدون لینک) -->
       <div class="logo">
         <img src="logo.png" alt="لوگو مولوی کمپانی" class="logo__img">
-        <h1 class="logo__text">مولوی&nbsp;کمپانی</h1>
+        <h1 class="logo__text">مولوی کمپانی</h1>
       </div>
-
-      <nav class="nav" id="main-nav">
+      <nav class="nav" id="main-nav" data-aos="fade-down" data-aos-delay="100">
         <a href="#about">درباره ما</a>
-        <a href="#services">خدمات</a>
-        <a href="#gallery">گالری</a>
+        <a href="#services">خدمات طراحی</a>
         <a href="#contact">تماس</a>
       </nav>
-
-      <button class="btn-gold" data-scroll="#contact">مشاوره رایگان</button>
-
+      <button class="btn btn--outline desktop-only" data-scroll="#contact" data-aos="zoom-in" data-aos-delay="200">مشاوره رایگان</button>
       <button class="burger" id="burger" aria-label="منو">&#9776;</button>
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- Hero -->
   <section class="hero">
-    <h2>تیونینگ و طراحی خودروهای لوکس</h2>
-    <button class="btn-gold" data-scroll="#contact">مشاوره رایگان</button>
+    <div class="hero__overlay"></div>
+    <div class="car-animation" data-aos="fade-right" data-aos-duration="4000" data-aos-easing="ease-in-out">
+      <img src="car.png" alt="پورشه 911" />
+    </div>
+    <div class="hero__content" data-aos="fade-up">
+      <h2 class="hero__title"><span>طراحی</span> سه‌بعدی خودروهای لوکس</h2>
+      <p class="hero__subtitle">تجربهٔ شکوه و سبک — از سال ۱۴۰۴</p>
+      <button class="btn btn--gold" data-scroll="#services" data-aos="zoom-in" data-aos-delay="200">مشاهده خدمات</button>
+    </div>
   </section>
 
-  <!-- ===== About ===== -->
+  <!-- About -->
   <section id="about" class="section">
     <div class="container">
-      <h2>درباره ما</h2>
-      <p>مولوی کمپانی از سال ۱۳۸۵ با عشق به سرعت و زیبایی در کنار شماست.</p>
-    </div>
-  </section>
-
-  <!-- ===== Services ===== -->
-  <section id="services" class="section dark">
-    <div class="container">
-      <h2>خدمات ما</h2>
-      <div class="cards">
-        <div class="card"><h3>طراحی بدنه</h3></div>
-        <div class="card"><h3>تقویت موتور</h3></div>
-        <div class="card"><h3>کیت بدنه</h3></div>
-        <div class="card"><h3>دیتیلینگ</h3></div>
+      <h2 data-aos="fade-up"><i data-feather="info"></i> درباره ما</h2>
+      <p data-aos="fade-up" data-aos-delay="100">مولوی کمپانی از سال <strong>۱۴۰۴</strong> تخصص خود را در طراحی سه‌بعدی خودروهای لوکس متمرکز کرده است.</p>
+      <div class="timeline" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-item"><strong>۱۴۰۴</strong><span>تأسیس کمپانی</span></div>
+        <div class="timeline-item"><strong>طراحی</strong><span>سه‌بعدی خودرو</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Gallery ===== -->
-  <section id="gallery" class="section">
+  <!-- Services -->
+  <section id="services" class="section services">
     <div class="container">
-      <h2>گالری</h2>
-      <div class="gallery">
-        <img src="https://source.unsplash.com/400x300/?car,luxury" alt="">
-        <img src="https://source.unsplash.com/400x300/?car,interior" alt="">
-        <img src="https://source.unsplash.com/400x300/?car,exterior" alt="">
+      <h2 data-aos="fade-up"><i data-feather="tool"></i> خدمات طراحی</h2>
+      <div class="services-grid">
+        <div class="service-card" data-aos="flip-left">
+          <i data-feather="edit-3"></i>
+          <h3>طراحی بدنه سفارشی</h3>
+          <p>ایده‌های شما را به طرح سه‌بعدی واقع‌گرایانه تبدیل می‌کنیم.</p>
+        </div>
+        <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+          <i data-feather="layout"></i>
+          <h3>طراحی داخلی</h3>
+          <p>هارمونی فضای داخلی با تاکید بر لوکس بودن.</p>
+        </div>
+        <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+          <i data-feather="droplet"></i>
+          <h3>پالت رنگ و دیتیلینگ</h3>
+          <p>انتخاب دقیق رنگ و جزئیات بصری برای جلوه‌ای خاص.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact ===== -->
-  <section id="contact" class="section dark">
+  <!-- Contact -->
+  <section id="contact" class="section contact">
     <div class="container">
-      <h2>تماس با ما</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="نام" required>
-        <input type="tel" placeholder="تلفن" required>
-        <textarea rows="4" placeholder="پیام"></textarea>
-        <button type="submit" class="btn-gold">ارسال</button>
+      <h2 data-aos="fade-up"><i data-feather="phone"></i> تماس با ما</h2>
+      <form class="contact-form" data-aos="fade-up" data-aos-delay="150">
+        <div class="input-group"><i data-feather="user"></i><input type="text" placeholder="نام کامل" required></div>
+        <div class="input-group"><i data-feather="phone"></i><input type="tel" placeholder="شماره تماس" required></div>
+        <div class="input-group"><i data-feather="mail"></i><textarea rows="4" placeholder="پیام شما"></textarea></div>
+        <button class="btn btn--gold" type="submit"><i data-feather="send"></i> ارسال</button>
       </form>
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>© ۲۰۲۵ مولوی کمپانی</p>
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up">
+    <p>© ۲۰۲۵ مولوی کمپانی. تمامی حقوق محفوظ است.</p>
+    <p>اینستاگرام: <a href="https://instagram.com/moulavi.company" target="_blank">@moulavi.company</a></p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
+  <script>
+    feather.replace();
+    AOS.init({ once: true, easing: 'ease-out-cubic' });
+  </script>
 </body>
 </html>
