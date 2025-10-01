@@ -1,11 +1,6 @@
-// Mobile nav toggle
-document.getElementById('burger').addEventListener('click', function() {
-  document.getElementById('main-nav').classList.toggle('show');
-});
-// Smooth scroll
-document.querySelectorAll('[data-scroll]').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(btn.dataset.scroll).scrollIntoView({ behavior: 'smooth' });
-  });
-});
+// نمایش نرمِ سکشن‌ها هنگام اسکرول
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+}, {threshold: .2});
+
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
